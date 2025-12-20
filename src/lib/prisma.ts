@@ -1,9 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
-import { neon, Pool, neonConfig } from "@neondatabase/serverless";
-
-// Configure for serverless
-neonConfig.fetchConnectionCache = true;
+import { Pool } from "@neondatabase/serverless";
 
 const globalForPrisma = globalThis as unknown as {
   prisma?: PrismaClient;
@@ -28,4 +25,3 @@ export const prisma = globalForPrisma.prisma ?? createPrismaClient();
 if (process.env.NODE_ENV !== "production") {
   globalForPrisma.prisma = prisma;
 }
-
