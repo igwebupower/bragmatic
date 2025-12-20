@@ -8,8 +8,10 @@
   --surface-card: #111111;
   --border-subtle: #222222;
   --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --text-muted: #666666;
+  --text-secondary: #b0b0b0;
+  --text-muted: #888888;
+  --feedback-success: #10b981;
+  --feedback-error: #ef4444;
   --font-heading: "Avenir Next", "Avenir", -apple-system, sans-serif;
   --font-body: "Raleway", -apple-system, sans-serif;
   color-scheme: dark;
@@ -24,6 +26,8 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
+  --color-feedback-success: var(--feedback-success);
+  --color-feedback-error: var(--feedback-error);
   --font-sans: var(--font-body);
   --font-display: var(--font-heading);
 }
@@ -203,4 +207,12 @@ a {
   content: "▶";
   font-size: 32px;
   opacity: 0.4;
+}
+
+/* Form input focus states */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--brand-yellow);
+  outline-offset: 2px;
 }
