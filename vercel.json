@@ -1,6 +1,3 @@
 {
-  "buildCommand": "cd bragnetic && npm install && npm run build",
-  "outputDirectory": "bragnetic/.next",
-  "framework": "nextjs",
-  "installCommand": "cd bragnetic && npm install"
+  "rootDirectory": "bragnetic"
 }
