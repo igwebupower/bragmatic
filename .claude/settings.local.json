@@ -15,7 +15,8 @@
       "Bash(openssl rand:*)",
       "Bash(set \"DATABASE_URL=postgresql://neondb_owner:npg_mP4j8Kewdcqk@ep-cold-lab-ah9y1sfq-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require\")",
       "Bash(git push:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(cat:*)"
     ]
   }
 }
