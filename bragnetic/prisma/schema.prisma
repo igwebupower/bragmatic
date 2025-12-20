@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model CreatorApplication {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  portfolio String?
+  niches    String?
+  message   String?
+  createdAt DateTime @default(now())
+}
+
+model BrandEnquiry {
+  id        String   @id @default(cuid())
+  company   String
+  contact   String
+  email     String
+  jobTitle  String?
+  industry  String?
+  message   String?
+  createdAt DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String?
+  email     String
+  type      String
+  message   String?
+  createdAt DateTime @default(now())
+}
+
+model AcademyWaitlist {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+}
+

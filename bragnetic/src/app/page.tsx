@@ -1,6 +1,8 @@
- "use client";
+"use client";
 import Link from "next/link";
 import { SiteShell, SectionHeading } from "../components/site-shell";
+import { VideoEmbed, VideoGrid } from "../components/video-embed";
+import { showcaseVideos, heroVideo } from "../lib/videos";
 import { useState } from "react";
 
 const creatorSteps = [
@@ -23,8 +25,6 @@ const stats = [
 ];
 
 const logos = ["TikTok", "Instagram", "YouTube", "Meta", "Snapchat"];
-
-const videoPlaceholders = Array.from({ length: 6 }).map((_, i) => `Video ${i + 1}`);
 
 const pathways = [
   {
@@ -118,7 +118,12 @@ export default function Home() {
                 Premium yet simple. Designed to showcase UGC that converts across TikTok, Reels,
                 Shorts, and more.
               </p>
-              <div className="video-placeholder">Coming Soon</div>
+              <VideoEmbed
+                src={heroVideo.src}
+                thumbnail={heroVideo.thumbnail}
+                title={heroVideo.title}
+                placeholder="Hero video coming soon"
+              />
             </div>
           </div>
         </div>
@@ -155,13 +160,7 @@ export default function Home() {
       <section className="section bg-brand-black">
         <div className="container space-y-8">
           <SectionHeading eyebrow="Recent work" title="Video showcase" subhead="Scroll-stopping content from our creators." />
-          <div className="grid gap-4 md:grid-cols-3">
-            {videoPlaceholders.map((video) => (
-              <div key={video} className="video-placeholder">
-                {video}
-              </div>
-            ))}
-          </div>
+          <VideoGrid videos={showcaseVideos} />
         </div>
       </section>
 
