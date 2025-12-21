@@ -94,7 +94,7 @@ export default function Home() {
         <div className="container grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-center">
           <div className="space-y-6">
             <span className="eyebrow">UGC CREATOR NETWORK</span>
-            <h1 className="headline text-5xl md:text-7xl">
+            <h1 className="headline text-4xl md:text-6xl">
               Create Content.
               <br />
               Drive Results.

@@ -64,7 +64,7 @@ export function WaitlistForm({ dark = false }: { dark?: boolean }) {
   if (status.state === "success") {
     return (
       <div className={`rounded-xl p-6 ${dark ? "bg-black/10" : "bg-surface-dark"}`}>
-        <p className={`text-center font-medium ${dark ? "text-black" : "text-green-400"}`}>
+        <p className={`text-center font-medium ${dark ? "text-black" : "text-feedback-success"}`}>
           {status.message}
         </p>
       </div>
@@ -73,7 +73,7 @@ export function WaitlistForm({ dark = false }: { dark?: boolean }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid gap-3 md:grid-cols-2">
         <label className={labelClass}>
           Name
           <input
@@ -123,7 +123,7 @@ export function WaitlistForm({ dark = false }: { dark?: boolean }) {
       </button>
 
       {status.state === "error" && (
-        <p className={`text-sm ${dark ? "text-red-700" : "text-red-400"}`}>{status.message}</p>
+        <p className={`text-sm ${dark ? "text-red-700" : "text-feedback-error"}`}>{status.message}</p>
       )}
     </form>
   );

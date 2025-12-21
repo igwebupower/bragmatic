@@ -95,9 +95,9 @@ export function BrandEnquiryForm() {
         {status.state === "submitting" ? "Submitting..." : "Submit Enquiry"}
       </button>
       {status.state === "success" ? (
-        <p className="text-green-400 text-sm">{status.message}</p>
+        <p className="text-feedback-success text-sm">{status.message}</p>
       ) : status.state === "error" ? (
-        <p className="text-red-400 text-sm">{status.message}</p>
+        <p className="text-feedback-error text-sm">{status.message}</p>
       ) : null}
     </form>
   );
@@ -165,9 +165,9 @@ export function ContactForm() {
         {status.state === "submitting" ? "Sending..." : "Send"}
       </button>
       {status.state === "success" ? (
-        <p className="text-green-400 text-sm">{status.message}</p>
+        <p className="text-feedback-success text-sm">{status.message}</p>
       ) : status.state === "error" ? (
-        <p className="text-red-400 text-sm">{status.message}</p>
+        <p className="text-feedback-error text-sm">{status.message}</p>
       ) : null}
     </form>
   );
@@ -237,9 +237,9 @@ export function CreatorInlineForm() {
         {status.state === "submitting" ? "Submitting..." : "Submit Application"}
       </button>
       {status.state === "success" ? (
-        <p className="text-green-400 text-sm">{status.message}</p>
+        <p className="text-feedback-success text-sm">{status.message}</p>
       ) : status.state === "error" ? (
-        <p className="text-red-400 text-sm">{status.message}</p>
+        <p className="text-feedback-error text-sm">{status.message}</p>
       ) : null}
     </form>
   );
@@ -259,7 +259,7 @@ function Input({
   required?: boolean;
 }) {
   return (
-    <label className="text-sm text-text-secondary">
+    <label className="block text-sm text-text-primary mb-1">
       {label}
       <input
         name={name}
@@ -284,7 +284,7 @@ function Textarea({
   rows?: number;
 }) {
   return (
-    <label className="text-sm text-text-secondary">
+    <label className="block text-sm text-text-primary mb-1">
       {label}
       <textarea
         name={name}
@@ -298,7 +298,7 @@ function Textarea({
 
 function Select({ label, name, options }: { label: string; name: string; options: string[] }) {
   return (
-    <label className="text-sm text-text-secondary">
+    <label className="block text-sm text-text-primary mb-1">
       {label}
       <select
         name={name}
