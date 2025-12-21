@@ -24,7 +24,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-brand-black text-text-primary">
       <header className="sticky top-0 z-30 backdrop-blur bg-black/70 border-b border-border-subtle">
-        <div className="container flex items-center justify-between py-5">
+        <div className="container flex items-center justify-between pt-7 pb-5">
           <Link href="/" className="flex items-center gap-2.5 font-bold tracking-tight">
             <span className="h-9 w-9 rounded-full bg-brand-yellow text-brand-black grid place-items-center text-sm font-black">
               B
