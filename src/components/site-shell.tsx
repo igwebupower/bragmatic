@@ -24,22 +24,22 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-brand-black text-text-primary">
       <header className="sticky top-0 z-30 backdrop-blur bg-black/70 border-b border-border-subtle">
-        <div className="container flex items-center justify-between py-4">
-          <Link href="/" className="flex items-center gap-2 font-bold tracking-tight">
-            <span className="h-8 w-8 rounded-full bg-brand-yellow text-brand-black grid place-items-center text-sm font-black">
+        <div className="container flex items-center justify-between py-5">
+          <Link href="/" className="flex items-center gap-2.5 font-bold tracking-tight">
+            <span className="h-9 w-9 rounded-full bg-brand-yellow text-brand-black grid place-items-center text-sm font-black">
               B
             </span>
             <span className="text-lg">Bragnetic</span>
           </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm text-text-primary">
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-brand-yellow transition-colors">
+              <Link key={link.href} href={link.href} className="text-text-secondary hover:text-brand-yellow transition-colors py-1">
                 {link.label}
               </Link>
             ))}
           </nav>
-          <div className="flex items-center gap-3">
-            <Link href="/brands" className="hidden md:inline-flex btn btn-primary text-sm px-4 py-2">
+          <div className="flex items-center gap-4">
+            <Link href="/brands" className="hidden md:inline-flex btn btn-primary text-sm px-5 py-2.5">
               Work With Us
             </Link>
             <button
@@ -113,60 +113,60 @@ export function SectionHeading({
 
 function Footer() {
   return (
-    <footer className="border-t border-border-subtle bg-brand-black">
-      <div className="container py-16 grid gap-10 md:grid-cols-4">
-        <div className="space-y-4">
-          <Link href="/" className="flex items-center gap-2 font-bold tracking-tight">
-            <span className="h-8 w-8 rounded-full bg-brand-yellow text-brand-black grid place-items-center text-sm font-black">
+    <footer className="mt-20 border-t border-border-subtle bg-brand-black">
+      <div className="container pt-20 pb-16 grid gap-12 md:grid-cols-4">
+        <div className="space-y-5">
+          <Link href="/" className="flex items-center gap-2.5 font-bold tracking-tight">
+            <span className="h-9 w-9 rounded-full bg-brand-yellow text-brand-black grid place-items-center text-sm font-black">
               B
             </span>
             <span className="text-lg">Bragnetic</span>
           </Link>
-          <p className="text-text-secondary text-sm leading-relaxed">
-            UGC creator network delivering scroll-stopping video ads.
+          <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
+            UGC creator network delivering scroll-stopping video ads for modern brands.
           </p>
         </div>
-        <div className="space-y-4 text-sm">
-          <div className="font-semibold text-text-primary">Pages</div>
-          <div className="flex flex-col gap-3 text-text-secondary">
+        <div className="space-y-5 text-sm">
+          <h3 className="font-semibold text-text-primary">Pages</h3>
+          <nav className="flex flex-col gap-3 text-text-secondary">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-brand-yellow transition-colors">
+              <Link key={link.href} href={link.href} className="hover:text-brand-yellow transition-colors w-fit">
                 {link.label}
               </Link>
             ))}
-          </div>
+          </nav>
         </div>
-        <div className="space-y-4 text-sm">
-          <div className="font-semibold text-text-primary">Legal</div>
-          <div className="flex flex-col gap-3 text-text-secondary">
-            <Link href="/privacy" className="hover:text-brand-yellow transition-colors">
+        <div className="space-y-5 text-sm">
+          <h3 className="font-semibold text-text-primary">Legal</h3>
+          <nav className="flex flex-col gap-3 text-text-secondary">
+            <Link href="/privacy" className="hover:text-brand-yellow transition-colors w-fit">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-brand-yellow transition-colors">
+            <Link href="/terms" className="hover:text-brand-yellow transition-colors w-fit">
               Terms of Service
             </Link>
-            <Link href="/cookies" className="hover:text-brand-yellow transition-colors">
+            <Link href="/cookies" className="hover:text-brand-yellow transition-colors w-fit">
               Cookie Policy
             </Link>
-          </div>
+          </nav>
         </div>
-        <div className="space-y-4 text-sm">
-          <div className="font-semibold text-text-primary">Social</div>
-          <div className="flex flex-col gap-3 text-text-secondary">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-colors">
+        <div className="space-y-5 text-sm">
+          <h3 className="font-semibold text-text-primary">Connect</h3>
+          <nav className="flex flex-col gap-3 text-text-secondary">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-colors w-fit">
               Instagram
             </a>
-            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-colors">
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-colors w-fit">
               TikTok
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-colors">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-colors w-fit">
               LinkedIn
             </a>
-          </div>
+          </nav>
         </div>
       </div>
       <div className="border-t border-brand-yellow/20">
-        <div className="container py-6 text-center text-text-muted text-sm">
+        <div className="container py-8 text-center text-text-muted text-sm tracking-wide">
           © {new Date().getFullYear()} Bragnetic. All rights reserved.
         </div>
       </div>
