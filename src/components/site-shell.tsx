@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { CookieBanner } from "./cookie-banner";
 
 type NavLink = {
   href: string;
@@ -85,6 +86,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       </header>
       <main>{children}</main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 }
@@ -112,56 +114,61 @@ export function SectionHeading({
 function Footer() {
   return (
     <footer className="border-t border-border-subtle bg-brand-black">
-      <div className="container py-12 grid gap-8 md:grid-cols-4">
-        <div className="space-y-3">
+      <div className="container py-16 grid gap-10 md:grid-cols-4">
+        <div className="space-y-4">
           <Link href="/" className="flex items-center gap-2 font-bold tracking-tight">
             <span className="h-8 w-8 rounded-full bg-brand-yellow text-brand-black grid place-items-center text-sm font-black">
               B
             </span>
             <span className="text-lg">Bragnetic</span>
           </Link>
-          <p className="text-text-secondary text-sm">
+          <p className="text-text-secondary text-sm leading-relaxed">
             UGC creator network delivering scroll-stopping video ads.
           </p>
         </div>
-        <div className="space-y-3 text-sm">
+        <div className="space-y-4 text-sm">
           <div className="font-semibold text-text-primary">Pages</div>
-          <div className="flex flex-col gap-2 text-text-secondary">
+          <div className="flex flex-col gap-3 text-text-secondary">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-brand-yellow">
+              <Link key={link.href} href={link.href} className="hover:text-brand-yellow transition-colors">
                 {link.label}
               </Link>
             ))}
           </div>
         </div>
-        <div className="space-y-3 text-sm">
+        <div className="space-y-4 text-sm">
           <div className="font-semibold text-text-primary">Legal</div>
-          <div className="flex flex-col gap-2 text-text-secondary">
-            <Link href="/privacy" className="hover:text-brand-yellow">
-              Privacy
+          <div className="flex flex-col gap-3 text-text-secondary">
+            <Link href="/privacy" className="hover:text-brand-yellow transition-colors">
+              Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-brand-yellow">
-              Terms
+            <Link href="/terms" className="hover:text-brand-yellow transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/cookies" className="hover:text-brand-yellow transition-colors">
+              Cookie Policy
             </Link>
           </div>
         </div>
-        <div className="space-y-3 text-sm">
+        <div className="space-y-4 text-sm">
           <div className="font-semibold text-text-primary">Social</div>
-          <div className="flex flex-col gap-2 text-text-secondary">
-            <a href="https://www.instagram.com" className="hover:text-brand-yellow">
+          <div className="flex flex-col gap-3 text-text-secondary">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-colors">
               Instagram
             </a>
-            <a href="https://www.tiktok.com" className="hover:text-brand-yellow">
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-colors">
               TikTok
             </a>
-            <a href="https://www.linkedin.com" className="hover:text-brand-yellow">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-colors">
               LinkedIn
             </a>
           </div>
         </div>
       </div>
-      <div className="border-t border-border-subtle py-4 text-center text-text-muted text-sm">
-        © 2025 Bragnetic. All rights reserved.
+      <div className="border-t border-brand-yellow/20">
+        <div className="container py-6 text-center text-text-muted text-sm">
+          © {new Date().getFullYear()} Bragnetic. All rights reserved.
+        </div>
       </div>
     </footer>
   );
