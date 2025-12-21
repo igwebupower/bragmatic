@@ -18,10 +18,10 @@ const brandSteps = [
 ];
 
 const stats = [
-  { value: "50+", label: "Creators" },
-  { value: "100+", label: "Videos Delivered" },
-  { value: "5M+", label: "Views Generated" },
-  { value: "10", label: "Platforms Covered" },
+  { value: "6", label: "Platforms Supported" },
+  { value: "24hr", label: "Response Time" },
+  { value: "100%", label: "Vetted Creators" },
+  { value: "Fast", label: "Turnaround" },
 ];
 
 const logos = ["TikTok", "Instagram", "YouTube", "Meta", "Snapchat"];
